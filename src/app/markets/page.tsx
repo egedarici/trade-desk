@@ -41,24 +41,15 @@ export default function MarketsPage() {
   return (
     <>
       <Navbar />
-      <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 40px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "240px 1fr",
-            gap: 32,
-            padding: "40px 0 0",
-          }}
-        >
+      <div className="r-container">
+        <div className="r-page-grid-2-top">
           <Sidebar active="Market Intelligence" />
           <main>
             {/* Page header */}
             <header
+              className="r-page-header-col"
               style={{
                 padding: "20px 0 40px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-end",
               }}
             >
               <div>
@@ -84,7 +75,7 @@ export default function MarketsPage() {
                   Market—Analysis.
                 </h1>
               </div>
-              <div style={{ display: "flex", gap: 8 }}>
+              <div className="r-time-filters">
                 {timeFilters.map((f) => (
                   <button
                     key={f}
@@ -109,14 +100,7 @@ export default function MarketsPage() {
             </header>
 
             {/* Market grid */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "320px 1fr",
-                gap: 24,
-                paddingBottom: 100,
-              }}
-            >
+            <div className="r-grid-market">
               {/* ── Left column ── */}
               <div>
                 {/* Watchlist */}
@@ -431,14 +415,7 @@ export default function MarketsPage() {
                 </div>
 
                 {/* Metric cards */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: 24,
-                    marginBottom: 24,
-                  }}
-                >
+                <div className="r-grid-metrics-3">
                   {metricsData.map((m) => (
                     <div
                       key={m.label}
@@ -492,8 +469,9 @@ export default function MarketsPage() {
                   >
                     Trend—Analysis Summary
                   </div>
+                  <div className="r-table-wrap">
                   <table
-                    style={{ width: "100%", borderCollapse: "collapse" }}
+                    style={{ width: "100%", borderCollapse: "collapse", minWidth: 500 }}
                   >
                     <thead>
                       <tr>
@@ -594,6 +572,7 @@ export default function MarketsPage() {
                       ))}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               </div>
             </div>

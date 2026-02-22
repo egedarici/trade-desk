@@ -169,25 +169,16 @@ export default function OrderTrackingPage() {
   return (
     <>
       <Navbar />
-      <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 40px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "240px 1fr",
-            gap: 32,
-            padding: "40px 0 0",
-          }}
-        >
+      <div className="r-container">
+        <div className="r-page-grid-2-top">
           <Sidebar active="Active Orders" />
           <main>
             {/* Page header */}
             <header
+              className="r-page-header-col"
               style={{
                 marginBottom: 40,
                 paddingTop: 20,
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-end",
               }}
             >
               <div>
@@ -242,14 +233,7 @@ export default function OrderTrackingPage() {
             </header>
 
             {/* Two-column tracking layout */}
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1.2fr 0.8fr",
-                gap: 24,
-                paddingBottom: 100,
-              }}
-            >
+            <div className="r-grid-tracking">
               {/* ── Left column ── */}
               <div>
                 {/* Map card */}
@@ -539,16 +523,7 @@ export default function OrderTrackingPage() {
                     </div>
                   </div>
 
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: 24,
-                      marginTop: 24,
-                      paddingTop: 24,
-                      borderTop: "1px solid rgba(0,0,0,0.05)",
-                    }}
-                  >
+                  <div className="r-container-info">
                     {[
                       { label: "Gross Weight", value: data.grossWeight },
                       { label: "Temperature", value: data.temperature },

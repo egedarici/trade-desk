@@ -32,15 +32,8 @@ export default function SettingsPage() {
   return (
     <>
       <Navbar />
-      <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 40px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "240px 1fr",
-            gap: 32,
-            padding: "40px 0 100px",
-          }}
-        >
+      <div className="r-container">
+        <div className="r-page-grid-2">
           <Sidebar active="Settings" />
           <main style={{ maxWidth: 720 }}>
             <h1
@@ -74,13 +67,7 @@ export default function SettingsPage() {
               >
                 Company Profile
               </h3>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 20,
-                }}
-              >
+              <div className="r-grid-form-2">
                 <div style={{ marginBottom: 24 }}>
                   <label style={labelStyle}>Company Name</label>
                   <input

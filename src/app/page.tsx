@@ -62,21 +62,8 @@ export default function DashboardPage() {
     <>
       <Navbar />
 
-      <div
-        style={{
-          maxWidth: 1440,
-          margin: "0 auto",
-          padding: "0 40px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "240px 1fr 320px",
-            gap: 32,
-            padding: "40px 0",
-          }}
-        >
+      <div className="r-container">
+        <div className="r-page-grid-3">
           {/* ── Sidebar ── */}
           <Sidebar active="Overview" />
 
@@ -125,7 +112,8 @@ export default function DashboardPage() {
                 </Link>
               </div>
 
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <div className="r-table-wrap">
+              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr>
                     {["Order ID", "Commodity", "Volume", "Status", "ETA", ""].map(
@@ -226,6 +214,7 @@ export default function DashboardPage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </section>
 
             {/* Recent Quotations card */}
@@ -242,13 +231,7 @@ export default function DashboardPage() {
               >
                 Recent Quotations
               </h2>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 16,
-                }}
-              >
+              <div className="r-grid-2">
                 <QuotationCard
                   rfqLabel="RFQ #772 - Textile Fibers"
                   value="$42,800.00"
@@ -276,13 +259,7 @@ export default function DashboardPage() {
               >
                 Recommended Markets
               </h2>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: 16,
-                }}
-              >
+              <div className="r-grid-3">
                 {markets.map((m) => (
                   <MarketCard
                     key={m.name}

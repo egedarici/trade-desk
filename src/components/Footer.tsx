@@ -7,16 +7,8 @@ export default function Footer() {
         padding: "60px 40px",
       }}
     >
-      <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            borderTop: "1px solid rgba(255,255,255,0.1)",
-            paddingTop: 40,
-          }}
-        >
+      <div className="r-container" style={{ padding: 0 }}>
+        <div className="r-footer-inner">
           <div
             style={{
               fontSize: 20,

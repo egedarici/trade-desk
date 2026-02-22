@@ -62,13 +62,7 @@ export default function SubmitQuotationPage() {
     return (
       <>
         <Navbar />
-        <div
-          style={{
-            maxWidth: 1440,
-            margin: "0 auto",
-            padding: "0 40px",
-          }}
-        >
+        <div className="r-container">
           <div
             style={{
               display: "flex",
@@ -119,20 +113,12 @@ export default function SubmitQuotationPage() {
     <>
       <Navbar />
 
-      <div
-        style={{
-          maxWidth: 1440,
-          margin: "0 auto",
-          padding: "0 40px",
-        }}
-      >
+      <div className="r-container">
         {/* ── Header ── */}
         <div
+          className="r-page-header-col"
           style={{
             padding: "60px 0 40px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
           }}
         >
           <div>
@@ -188,14 +174,7 @@ export default function SubmitQuotationPage() {
         </div>
 
         {/* ── Grid ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.5fr 1fr",
-            gap: 40,
-            paddingBottom: 100,
-          }}
-        >
+        <div className="r-submit-layout">
           {/* ── Left column: Form ── */}
           <div>
             <div
@@ -226,13 +205,7 @@ export default function SubmitQuotationPage() {
                   >
                     Pricing Breakdown
                   </h3>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: 20,
-                    }}
-                  >
+                  <div className="r-grid-form-2">
                     <div style={{ marginBottom: 24 }}>
                       <label style={labelStyle}>Unit Price (USD)</label>
                       <input
@@ -299,13 +272,7 @@ export default function SubmitQuotationPage() {
                   >
                     Logistics &amp; Delivery
                   </h3>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: 20,
-                    }}
-                  >
+                  <div className="r-grid-form-2">
                     <div style={{ marginBottom: 24 }}>
                       <label style={labelStyle}>Shipping Method</label>
                       <select

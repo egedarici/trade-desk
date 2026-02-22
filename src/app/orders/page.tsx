@@ -51,25 +51,11 @@ export default function OrdersPage() {
   return (
     <>
       <Navbar />
-      <div style={{ maxWidth: 1440, margin: "0 auto", padding: "0 40px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "240px 1fr",
-            gap: 32,
-            padding: "40px 0 100px",
-          }}
-        >
+      <div className="r-container">
+        <div className="r-page-grid-2">
           <Sidebar active="Active Orders" />
           <main>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: 32,
-              }}
-            >
+            <div className="r-page-header">
               <h1
                 style={{
                   fontSize: 32,
@@ -104,7 +90,8 @@ export default function OrdersPage() {
                 padding: 32,
               }}
             >
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <div className="r-table-wrap">
+              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 700 }}>
                 <thead>
                   <tr>
                     {[
@@ -232,6 +219,7 @@ export default function OrdersPage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </section>
           </main>
         </div>

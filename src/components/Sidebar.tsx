@@ -17,14 +17,7 @@ interface SidebarProps {
 
 export default function Sidebar({ active = "Overview" }: SidebarProps) {
   return (
-    <aside
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 8,
-        minHeight: "100%",
-      }}
-    >
+    <aside className="r-sidebar">
       {navItems.map((item) => (
         <Link
           key={item.label}

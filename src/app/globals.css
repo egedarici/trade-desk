@@ -29,3 +29,371 @@ body {
   overflow-x: hidden;
   line-height: 1.4;
 }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE LAYOUT CLASSES
+   ═══════════════════════════════════════ */
+
+/* Container */
+.r-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Navbar */
+.r-nav {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(232, 231, 229, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.r-nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.r-nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.r-nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 16px;
+  background: white;
+  border-radius: var(--radius-btn);
+}
+
+.r-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.r-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile menu overlay */
+.r-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(232, 231, 229, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 200;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.r-mobile-menu.open {
+  display: flex;
+}
+
+.r-mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.r-mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--text-primary);
+}
+
+.r-mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.r-mobile-menu-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.r-mobile-menu-links a:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.r-mobile-menu-links a.active-link {
+  background: white;
+  font-weight: 600;
+}
+
+/* Page grids */
+.r-page-grid-3 {
+  display: grid;
+  grid-template-columns: 240px 1fr 320px;
+  gap: 32px;
+  padding: 40px 0;
+}
+
+.r-page-grid-2 {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 40px 0 100px;
+}
+
+.r-page-grid-2-top {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 40px 0 0;
+}
+
+/* Sidebar */
+.r-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+
+/* Content grids */
+.r-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.r-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.r-grid-market {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  padding-bottom: 100px;
+}
+
+.r-grid-tracking {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  padding-bottom: 100px;
+}
+
+.r-grid-suppliers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.r-grid-form-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.r-grid-metrics-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* Table wrapper */
+.r-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Page header */
+.r-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+.r-page-header-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* Footer */
+.r-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+}
+
+/* Submit form layout */
+.r-submit-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  padding-bottom: 100px;
+}
+
+/* Container info grid */
+.r-container-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Time filters */
+.r-time-filters {
+  display: flex;
+  gap: 8px;
+}
+
+/* ═══════════════════════════════════════
+   TABLET (≤1024px)
+   ═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .r-container {
+    padding: 0 24px;
+  }
+
+  .r-nav {
+    padding: 20px 24px;
+  }
+
+  .r-page-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .r-page-grid-2,
+  .r-page-grid-2-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .r-sidebar {
+    display: none;
+  }
+
+  .r-hamburger {
+    display: flex;
+  }
+
+  .r-nav-links {
+    display: none;
+  }
+
+  .r-grid-market {
+    grid-template-columns: 1fr;
+  }
+
+  .r-grid-tracking {
+    grid-template-columns: 1fr;
+  }
+
+  .r-submit-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ═══════════════════════════════════════
+   MOBILE (≤640px)
+   ═══════════════════════════════════════ */
+@media (max-width: 640px) {
+  .r-container {
+    padding: 0 16px;
+  }
+
+  .r-nav {
+    padding: 16px;
+  }
+
+  .r-nav-profile {
+    display: none;
+  }
+
+  .r-grid-2,
+  .r-grid-suppliers,
+  .r-grid-form-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .r-grid-3,
+  .r-grid-metrics-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .r-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .r-page-header-col {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .r-footer-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .r-container-info {
+    grid-template-columns: 1fr;
+  }
+
+  .r-time-filters {
+    flex-wrap: wrap;
+  }
+
+  /* Scale down large headings on mobile */
+  h1 {
+    font-size: 24px !important;
+  }
+
+  /* Reduce card padding */
+  .r-card-mobile {
+    padding: 20px !important;
+  }
+}
