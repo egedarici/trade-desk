@@ -128,7 +128,7 @@ export default function DashboardPage() {
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    {["Order ID", "Commodity", "Volume", "Status", "ETA"].map(
+                    {["Order ID", "Commodity", "Volume", "Status", "ETA", ""].map(
                       (col) => (
                         <th
                           key={col}
@@ -198,6 +198,29 @@ export default function DashboardPage() {
                         }}
                       >
                         {order.eta}
+                      </td>
+                      <td
+                        style={{
+                          padding: "16px 0",
+                          fontSize: 14,
+                          borderBottom: "1px solid #F8F8F8",
+                        }}
+                      >
+                        <Link
+                          href={`/orders/${order.id.replace("#", "")}`}
+                          style={{
+                            padding: "6px 16px",
+                            borderRadius: "var(--radius-btn)",
+                            fontSize: 12,
+                            fontWeight: 600,
+                            background: "var(--accent-orange)",
+                            color: "white",
+                            textDecoration: "none",
+                            transition: "0.2s",
+                          }}
+                        >
+                          Track
+                        </Link>
                       </td>
                     </tr>
                   ))}
