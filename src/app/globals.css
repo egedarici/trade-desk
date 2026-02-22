@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --bg-light: #E8E7E5;
+  --bg-dark: #121212;
+  --accent-orange: #C64832;
+  --accent-orange-hover: #A63825;
+  --text-primary: #121212;
+  --text-secondary: #666666;
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-secondary: #A0A0A0;
+  --circle-grey: #D6D5D3;
+  --radius-card: 24px;
+  --radius-btn: 100px;
+  --radius-sm: 8px;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.4;
+}
