@@ -28,9 +28,9 @@ export default function Footer() {
               color: "white",
             }}
           >
-            Trade
+            Yorka
             <span style={{ color: "var(--accent-orange)" }}>—</span>
-            Desk
+            Global
           </div>
           <div
             style={{
@@ -38,7 +38,7 @@ export default function Footer() {
               color: "var(--text-on-dark-secondary)",
             }}
           >
-            © 2023 Secure Trading Environment. System Latency: 14ms
+            © 2026 Secure Trading Environment.
           </div>
         </div>
       </div>

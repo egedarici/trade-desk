@@ -38,9 +38,9 @@ export default function Navbar() {
           color: "inherit",
         }}
       >
-        Trade
+        Yorka
         <span style={{ color: "var(--accent-orange)" }}>—</span>
-        Desk
+        Global
       </Link>
 
       {/* Nav Links */}

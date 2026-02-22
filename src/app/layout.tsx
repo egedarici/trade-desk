@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Buyer Dashboard | Trade—Desk",
+  title: "Buyer Dashboard | Yorka—Global",
   description: "Global Markets. Trusted Trade.",
 };
 

@@ -586,7 +586,7 @@ export default function SubmitQuotationPage() {
                   textAlign: "center",
                 }}
               >
-                By submitting, you agree to the Trade—Desk Terms of Service
+                By submitting, you agree to the Yorka—Global Terms of Service
                 and Master Supply Agreement.
               </p>
             </div>
