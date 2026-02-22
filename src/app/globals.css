@@ -392,8 +392,137 @@ body {
     font-size: 24px !important;
   }
 
-  /* Reduce card padding */
-  .r-card-mobile {
+  /* Force all section/card-like elements to stay within viewport */
+  section, .r-card {
+    padding: 16px !important;
+    max-width: 100% !important;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Reduce main content padding */
+  main {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Ensure the whole page doesn't overflow */
+  .r-container {
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .r-page-grid-3,
+  .r-page-grid-2,
+  .r-page-grid-2-top {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Chart card needs less padding */
+  .r-chart-card {
+    padding: 16px !important;
+  }
+
+  /* Map container height */
+  .r-map-container {
+    height: 250px !important;
+  }
+
+  /* Quotation list items */
+  .r-quotation-item {
+    padding: 16px !important;
+    flex-direction: column;
+    gap: 12px !important;
+    align-items: flex-start !important;
+  }
+
+  .r-quotation-meta {
+    flex-direction: row-reverse !important;
+    width: 100%;
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+
+  /* Container unit big text */
+  .r-container-id {
+    font-size: 18px !important;
+    letter-spacing: 1px !important;
+    word-break: break-all;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 16px !important;
+  }
+
+  /* Tracking header buttons */
+  .r-header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px !important;
+  }
+
+  .r-header-actions button {
+    width: 100%;
+  }
+
+  /* Settings form */
+  .r-settings-card {
     padding: 20px !important;
+  }
+
+  /* Watchlist card */
+  .r-watchlist-card {
+    padding: 16px !important;
+  }
+
+  .r-watchlist-item {
+    padding: 12px !important;
+  }
+
+  /* Trend analysis & news cards */
+  .r-trend-card {
+    padding: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Metric cards */
+  .r-metric-card {
+    padding: 16px !important;
+  }
+
+  /* Chart bars height */
+  .r-chart-bars {
+    height: 220px !important;
+    gap: 4px !important;
+  }
+
+  /* Chart dates */
+  .r-chart-dates {
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  /* Price row */
+  .r-price-row span:first-child {
+    font-size: 24px !important;
+  }
+
+  .r-price-row span:nth-child(2) {
+    font-size: 13px !important;
+  }
+
+  /* Scale h2 on mobile */
+  h2 {
+    font-size: 20px !important;
+  }
+
+  /* Ensure all cards with white bg stay within bounds */
+  div[style*="borderRadius"] {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }

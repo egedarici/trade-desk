@@ -198,7 +198,7 @@ export default function OrderTrackingPage() {
                   {data.id}—{data.commodity}
                 </h1>
               </div>
-              <div style={{ display: "flex", gap: 12 }}>
+              <div className="r-header-actions" style={{ display: "flex", gap: 12 }}>
                 <button
                   style={{
                     padding: "10px 20px",
@@ -246,6 +246,7 @@ export default function OrderTrackingPage() {
                   }}
                 >
                   <div
+                    className="r-map-container"
                     style={{
                       height: 400,
                       background: "#d0cfcd",
@@ -504,6 +505,7 @@ export default function OrderTrackingPage() {
                     }}
                   >
                     <div
+                      className="r-container-id"
                       style={{
                         fontSize: 28,
                         fontWeight: 700,

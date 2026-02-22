@@ -86,6 +86,7 @@ export default function QuotationsPage() {
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <div
+                    className="r-quotation-item"
                     style={{
                       background: "white",
                       borderRadius: "var(--radius-card)",
@@ -114,6 +115,7 @@ export default function QuotationsPage() {
                       </div>
                     </div>
                     <div
+                      className="r-quotation-meta"
                       style={{
                         display: "flex",
                         gap: 32,

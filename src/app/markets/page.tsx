@@ -105,6 +105,7 @@ export default function MarketsPage() {
               <div>
                 {/* Watchlist */}
                 <div
+                  className="r-watchlist-card"
                   style={{
                     background: "var(--bg-dark)",
                     color: "white",
@@ -133,6 +134,7 @@ export default function MarketsPage() {
                     {watchlist.map((item, idx) => (
                       <div
                         key={item.name}
+                        className="r-watchlist-item"
                         onClick={() => setActiveWatchlistIdx(idx)}
                         style={{
                           padding: 16,
@@ -210,6 +212,7 @@ export default function MarketsPage() {
 
                 {/* News Feed */}
                 <div
+                  className="r-trend-card"
                   style={{
                     background: "white",
                     borderRadius: "var(--radius-card)",
@@ -266,6 +269,7 @@ export default function MarketsPage() {
               <div>
                 {/* Chart card */}
                 <div
+                  className="r-chart-card"
                   style={{
                     background: "white",
                     borderRadius: "var(--radius-card)",
@@ -274,10 +278,8 @@ export default function MarketsPage() {
                   }}
                 >
                   <div
+                    className="r-page-header-col"
                     style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "flex-start",
                       marginBottom: 32,
                     }}
                   >
@@ -292,6 +294,7 @@ export default function MarketsPage() {
                         WTI Crude Oil (Spot)
                       </h2>
                       <div
+                        className="r-price-row"
                         style={{
                           display: "flex",
                           alignItems: "baseline",
@@ -353,6 +356,7 @@ export default function MarketsPage() {
 
                   {/* Bar chart with trend line */}
                   <div
+                    className="r-chart-bars"
                     style={{
                       width: "100%",
                       height: 340,
@@ -399,6 +403,7 @@ export default function MarketsPage() {
                     </svg>
                   </div>
                   <div
+                    className="r-chart-dates"
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
@@ -419,6 +424,7 @@ export default function MarketsPage() {
                   {metricsData.map((m) => (
                     <div
                       key={m.label}
+                      className="r-metric-card"
                       style={{
                         background: "#F5F5F4",
                         padding: 24,
@@ -453,6 +459,7 @@ export default function MarketsPage() {
 
                 {/* Trend Analysis Table */}
                 <div
+                  className="r-trend-card"
                   style={{
                     background: "white",
                     borderRadius: "var(--radius-card)",

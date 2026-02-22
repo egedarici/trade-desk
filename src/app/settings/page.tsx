@@ -48,6 +48,7 @@ export default function SettingsPage() {
             </h1>
 
             <section
+              className="r-settings-card"
               style={{
                 background: "white",
                 borderRadius: "var(--radius-card)",
